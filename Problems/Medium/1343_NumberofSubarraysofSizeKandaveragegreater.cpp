@@ -44,6 +44,7 @@ public:
     int numOfSubarrays(vector<int>& arr, int k, int threshold) {
         vector<int> sums;
         int sum = 0;
+		//accumulate the sum
         for(auto a : arr){
             sum += a;
             sums.push_back(sum);
@@ -53,7 +54,8 @@ public:
         for(int e = k-1; e < arr.size(); e++){
             s = e - k + 1;
             int sasum = 0;
-            
+            //get starting and ending points and take the average and if avg 
+			//greater than threshold increment the count;
             if(s > 0)
                 sasum = sums[e] - sums[s-1];
             else
