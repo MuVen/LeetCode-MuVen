@@ -47,6 +47,7 @@ int main() {
 	set<int> mset;
 	set<int> excelset;
 	set<int> cmset;
+	set<int> fbq;
 	int N;
 	for (int i = 1; i <= 907; i++) {
 		cin >> N;
@@ -78,6 +79,30 @@ int main() {
 		cmset.insert(N);
 	}
 
+	int fbcount;
+	cin >> fbcount;
+	for(int i = 1; i <= fbcount; i++){
+		cin >> N;
+		fbq.insert(N);
+	}
+	
+	{
+		//mset - excelset will give me list of ids which is not updated in
+		//the excel;
+		for(auto i : fbq)
+			cout<<i<<" ";
+		cout<<endl<<endl;
+		
+		for (auto it = mset.begin(); it != mset.end(); ++it) {
+			fbq.erase(*it);
+		}
+		
+		for (auto i : fbq)
+			cout << i << " ";
+		cout << endl;
+		cout << "Unsolved Facebook Questions " << fbq.size() << endl << endl;
+	}
+	
 	vector<pair<int, int>> myvec;
 	vector<int> sprobs;
 	for (auto it = map.begin(); it != map.end(); ++it)
@@ -210,4 +235,8 @@ int main() {
 	cout << endl << "As of 08-Feburary-2020 Solved 445 problems and need to Solve 303 Problems" << endl;
 
 	cout << endl << "As of 11-Feburary-2020 Solved 450 problems and need to Solve 303 Problems" << endl;
+	
+	cout << endl << "As of 17-Feburary-2020 Solved 457 problems and need to Solve 297 Problems" << endl;
+	
+	cout << endl << "As of 19-Feburary-2020 Solved 462 problems and need to Solve 294 Problems" << endl;
 }
