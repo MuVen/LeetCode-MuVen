@@ -246,4 +246,6 @@ int main() {
 	cout << endl << "As of 7-March-2020 Solved 474 problems and need to Solve 291 Problems" << endl;
 	
 	cout << endl << "As of 11-March-2020 Solved 492 problems and need to Solve 287 Problems" << endl;
+	
+	cout << endl << "As of 25-March-2020 Solved 501 problems and need to Solve 287 Problems" << endl;
 }
